@@ -8,3 +8,8 @@ print('Working....')
 client_socket, addres = server.accept()
 data = client_socket.recv(1024).decode('utf-8')
 print(data)
+
+HDRS = 'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset: utf-8\r\n\r\n'
+content = 'Well done, baby...'.encode('utf-8')
+client_socket.send(HDRS.encode('utf-8')+content)
+print('shutdown this shit...')
