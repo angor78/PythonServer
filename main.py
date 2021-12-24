@@ -10,8 +10,6 @@ def start_my_server():
             print('Working....')
             client_socket, addres = server.accept()
             data = client_socket.recv(1024).decode('utf-8')
-            # print(data)
-            # HDRS = 'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset: utf-8\r\n\r\n'
             content = load_page_from_get_request(data)
             client_socket.send(content)
             client_socket.shutdown(socket.SHUT_WR)
@@ -24,11 +22,11 @@ def load_page_from_get_request(request_data):
     HDRS = 'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset: utf-8\r\n\r\n'
     HDRS_404 = 'HTTP/1.1 404 OK\r\nContent-Type: text/html; charset: utf-8\r\n\r\n'
     path = request_data.split(' ')[1]
-    response = ''
+    response = ' '
     try:
         with open('view' + path, 'rb') as file:
             response = file.read()
-        return HDRS.encode('utf-8') + response
+            return HDRS.encode('utf-8') + response
     except FileNotFoundError:
         return(HDRS_404 + 'Sorry bro! No page...').encode('utf-8')
 

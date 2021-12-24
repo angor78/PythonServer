@@ -1,14 +1,139 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Home</title>
-    </head>
-    <body>
-        <h1>Well done, buddy.....THIS IS IS HOME PAGE</h1>
-        <hr/>
-        <p>Connection estebleshed. What's next?</p>
-        <p>You can visit <a href="contacts.html">CONTACTS PAGE</a></p>
-        
-    </body>
+
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+
+    <section>
+        <div class="res">
+            <h2>Well done, buddy....</h2>
+        </div>
+        <div>
+            <h1>
+                <span>T</span>
+                <span>h</span>
+                <span>i</span>
+                <span>s&nbsp&nbsp</span>
+                <span>i</span>
+                <span>s&nbsp&nbsp</span>
+                <span>h</span>
+                <span>o</span>
+                <span>m</span>
+                <span>e&nbsp&nbsp</span>
+                <span>p</span>
+                <span>a</span>
+                <span>g</span>
+                <span>e</span>
+            </h1>
+        </div>
+
+        <div class="info">
+            <hr color="white" />
+            <p>Connection estebleshed. What's next?</p>
+            <p>You can visit <a href="contacts.html">CONTACTS PAGE</a></p>
+        </div>
+
+    </section>
+
+
+</body>
+<style>
+    .res h2 {
+        color: white;
+        border: 1px solid white;
+        padding: 5px;
+        margin-right: 20px;
+    }
+
+    .info {
+        position: absolute;
+        display: inline-block;
+        margin-top: 15em;
+    }
+
+    p {
+        color: white;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    section h1 span {
+        transition: 1.5s;
+    }
+
+    section h1 span:nth-child(10n+1) {
+        transition-delay: 0.1s;
+    }
+
+    section h1 span:nth-child(10n+2) {
+        transition-delay: 0.2s;
+    }
+
+    section h1 span:nth-child(10n+3) {
+        transition-delay: 0.3s;
+    }
+
+    section h1 span:nth-child(10n+4) {
+        transition-delay: 0.4s;
+    }
+
+    section h1 span:nth-child(10n+5) {
+        transition-delay: 0.5s;
+    }
+
+    section h1 span:nth-child(10n+6) {
+        transition-delay: 0.6s;
+    }
+
+    section h1 span:nth-child(10n+7) {
+        transition-delay: 0.7s;
+    }
+
+    section h1 span:nth-child(10n+8) {
+        transition-delay: 0.8s;
+    }
+
+    section h1 span:nth-child(10n+8) {
+        transition-delay: 0.9s;
+    }
+
+    section h1 span:nth-child(10n+9) {
+        transition-delay: 1s;
+    }
+
+
+    section h1:hover span {
+        filter: blur(20px);
+        opacity: 0;
+        transform: scale(2);
+    }
+
+    section h1 {
+        font-size: 3em;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        display: flex;
+    }
+</style>
+
 </html>
